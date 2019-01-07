@@ -38,6 +38,7 @@ logger = logging.getLogger(__name__)
 def start(bot, update):
     """Send a message when the command /start is issued."""
     update.message.reply_text('Здравствуйте, введите ваш идентификационный номер!')
+    chats.pop(update.message.chat_id, None)
 
 
 def help(bot, update):
